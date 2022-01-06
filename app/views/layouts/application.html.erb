@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TicketingSystem</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    
+  </head>
+
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item" >
+                <%= link_to 'users', users_path ,class:"nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'tickets', tickets_path,class:"nav-link"%>
+              </li>
+              <li class="nav-item">
+              <%= link_to 'comments', comments_path,class:"nav-link"%>
+            </li>
+            <li class="nav-item ">
+              <%= link_to 'Action Mail', '/rails/conductor/action_mailbox/inbound_emails',class:"nav-link"%>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>
